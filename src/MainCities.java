@@ -2,6 +2,10 @@ import java.util.*;
 
 public class MainCities {
 
+    public static void printByKey(String key, HashMap<String, String> map) {
+        System.out.printf("%-20s %s %n", key, map.get(key));
+    }
+
     public static void main(String[] args) {
 
         HashMap<String, String> citiesUK = new HashMap<>();
@@ -21,7 +25,7 @@ public class MainCities {
 
         while (it.hasNext()) {
             String key = it.next();
-            System.out.println("Key: " + key + "     value: " + citiesUK.get(key));
+            printByKey(key, citiesUK);
         }
 
         System.out.println("\n");
@@ -36,7 +40,7 @@ public class MainCities {
 
         while (itr.hasNext()) {
             String key = itr.next();
-            System.out.println("Key: " + key + "     value: " + citiesUK.get(key));
+            printByKey(key, citiesUK);
         }
     }
 }
